@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.alert import Alert
 from time import sleep
 #mngr327677
 #vuhegyv
@@ -21,6 +22,12 @@ sleep(1)
 elem = browser.find_element_by_name("button2")
 elem.click()
 
+alert = Alert(browser)
+
+print(alert.text)
+
+alert.accept()
+
 sleep(2)
 browser.quit()
 
@@ -41,6 +48,12 @@ sleep(1)
 elem = browser.find_element_by_name("button2")
 elem.click()
 
+alert = Alert(browser)
+
+print(alert.text)
+
+alert.accept()
+
 sleep(2)
 browser.quit()
 
@@ -60,6 +73,12 @@ elem.send_keys("19216845")
 sleep(1)
 elem = browser.find_element_by_name("button2")
 elem.click()
+
+alert = Alert(browser)
+
+print(alert.text)
+
+alert.accept()
 
 sleep(2)
 browser.quit()

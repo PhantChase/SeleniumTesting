@@ -1,5 +1,6 @@
 from selenium import webdriver
 from time import sleep
+from selenium.webdriver.common.alert import Alert
 #mngr327677
 #vuhegyv
 
@@ -18,6 +19,12 @@ elem.send_keys("money")
 
 elem = browser.find_element_by_name("AccSubmit")
 elem.click()
+
+alert = Alert(browser)
+
+print(alert.text)
+
+alert.accept()
 
 sleep(2)
 browser.quit()
@@ -53,5 +60,11 @@ elem.send_keys("money")
 elem = browser.find_element_by_name("AccSubmit")
 elem.click()
 
-sleep(5)
+alert = Alert(browser)
+
+print(alert.text)
+
+alert.accept()
+
+sleep(2)
 browser.quit()
